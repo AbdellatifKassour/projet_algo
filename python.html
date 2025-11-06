@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mode Python</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gatekeeper.js"></script>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-content">
+      <div class="nav-logo">AlgoMSI</div>
+      <ul>
+        <li><a href="home.html">🎓 Accueil</a></li>
+        <li><a href="cours.html">📘 Cours</a></li>
+        <li><a href="python.html" class="active">🐍 Mode Python</a></li>
+        <li><a href="snake.html">🕹️ Jeu Snake</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>🐍 Exécution Python Interactive</h1>
+  </header>
+
+  <main class="python-container">
+    <p>Teste ici les concepts avancés comme les <strong>listes (tableaux)</strong> et les <strong>fonctions (def)</strong> !</p>
+    <textarea id="python-code" class="editor" rows="15"># Teste les concepts avancés ici !
+# Exemple avec une fonction et une liste (tableau)
+
+def calculer_moyenne(notes):
+  if len(notes) == 0:
+    return 0
+  return sum(notes) / len(notes)
+
+mes_notes = [12, 18, 10, 15]
+moyenne = calculer_moyenne(mes_notes)
+
+print(f"Mes notes: {mes_notes}")
+print(f"Ma moyenne est: {moyenne}")
+</textarea>
+    <button class="btn" id="run-btn" disabled>▶️ Exécuter</button>
+    <pre id="python-output" class="output"></pre>
+  </main>
+
+  <footer>
+    <p>© 2025 – Réalisé par Abdellatif KASSOUR pour les étudiants MSI</p>
+  </footer>
+
+  <script src="run_python.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours Complet : Algorithmique</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gatekeeper.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-content">
+      <div class="nav-logo">AlgoMSI</div>
+      <ul>
+        <li><a href="home.html">🎓 Accueil</a></li>
+        <li><a href="cours.html" class="active">📘 Cours</a></li>
+        <li><a href="python.html">🐍 Mode Python</a></li>
+        <li><a href="snake.html">🕹️ Jeu Snake</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>💻 Cours Complet d'Algorithmique (de A à Z)</h1>
+    <p>Conçu pour les vrais débutants. Aucune connaissance préalable requise.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Module 0 : C'est quoi l'informatique ?</h2>
+      <p>Avant de parler d'algorithmes, comprenons ce qu'est un ordinateur. Voyez-le comme un assistant très rapide, mais très bête. Il ne fait <strong>que</strong> ce qu'on lui dit.</p>
+      <p>Le schéma de base est toujours le même :</p>
+      
+      <ol>
+        <li><strong>Entrée (Input) :</strong> L'utilisateur donne des informations (clic de souris, texte au clavier).</li>
+        <li><strong>Traitement (Process) :</strong> L'ordinateur exécute des instructions pour traiter ces informations.</li>
+        <li><strong>Sortie (Output) :</strong> L'ordinateur affiche un résultat (un son, une image à l'écran, un texte).</li>
+      </ol>
+      <p>Un <strong>algorithme</strong>, c'est simplement la recette, la liste d'instructions que vous donnez à l'ordinateur pour faire le "Traitement".</p>
+    </section>
+
+    <section>
+      <h2>Module 1 : Les Briques de Base</h2>
+      
+      <h3>1.1 Qu’est-ce qu’un algorithme ?</h3>
+      <p>Un <strong>algorithme</strong> est une suite finie et ordonnée d’instructions claires qui permettent de résoudre un problème.</p>
+      <div class="example">
+        <h3>☕ Exemple : Faire un café</h3>
+        <ol>
+          <li>Prendre une tasse</li>
+          <li>Mettre du café dans la tasse</li>
+          <li>Faire bouillir de l’eau</li>
+          <li>Verser l’eau chaude dans la tasse</li>
+          <li>Mélanger</li>
+        </ol>
+      </div>
+      <p>Si vous inversez l'ordre (ex: verser l'eau avant de prendre la tasse), ça ne marche pas. L'ordre est crucial.</p>
+      
+      <h3>1.2 Les Variables (La Mémoire)</h3>
+      <p>Une <strong>variable</strong> est une "boîte" dans la mémoire de l'ordinateur. Elle a une <strong>étiquette (un nom)</strong> et contient une <strong>valeur</strong>.</p>
+      <pre class="code">
+Début
+  // On crée une boîte "âge" et on met le nombre 25 dedans
+  âge ← 25
+  
+  // On crée une boîte "prénom" et on met le texte "Abdellatif"
+  prénom ← "Abdellatif"
+  
+  // On peut regarder ce qu'il y a dans les boîtes
+  Afficher âge
+  Afficher prénom
+Fin
+      </pre>
+      <p>Il existe plusieurs <strong>types</strong> de valeurs :</p>
+      <ul>
+        <li><strong>Nombre :</strong> 10, -5, 3.14</li>
+        <li><strong>Texte (Chaîne) :</strong> "Bonjour", "MSI" (toujours entre guillemets)</li>
+        <li><strong>Booléen :</strong> Vrai, Faux (pour les tests logiques)</li>
+      </ul>
+      
+      <h3>🧠 Exercice 1 : Variables</h3>
+      <p>Calculez le prix total de 3 articles coûtant 15€ chacun.</p>
+      <textarea id="editor1" class="editor" rows="8">Début
+  prix_unitaire ← 15
+  quantité ← 3
+  total ← prix_unitaire * quantité
+  Afficher total
+Fin</textarea>
+      <button onclick="runAlgorithm('editor1', 'output1')">▶️ Exécuter</button>
+      <pre id="output1" class="output"></pre>
+    </section>
+    
+    <section>
+      <h2>Module 2 : Prendre des Décisions et Répéter</h2>
+      
+      <h3>2.1 Les Conditions (Si... Alors... Sinon)</h3>
+      <p>Parfois, l'algorithme doit faire un choix. On utilise les conditions pour exécuter du code seulement si un test est Vrai.</p>
+      
+      <pre class="code">
+Début
+  Lire âge
+  
+  Si âge >= 18 Alors
+     Afficher "Vous êtes majeur."
+  Sinon
+     Afficher "Vous êtes mineur."
+  FinSi
+Fin
+      </pre>
+      
+      <h3>🧠 Exercice 2 : Conditions</h3>
+      <p>Demandez un nombre et affichez s'il est Positif, Négatif ou Nul.</p>
+      <textarea id="editor2" class="editor" rows="8">Début
+  Lire n
+  
+  Si n > 0 Alors
+     Afficher "Positif"
+  SinonSi n < 0 Alors
+     Afficher "Négatif"
+  Sinon
+     Afficher "Nul"
+  FinSi
+Fin</textarea>
+      <button onclick="runAlgorithm('editor2', 'output2')">▶️ Exécuter</button>
+      <pre id="output2" class="output"></pre>
+      
+      <h3>2.2 Les Boucles (Répétitions)</h3>
+      <p>Les boucles permettent de répéter un bloc d'instructions plusieurs fois. C'est la plus grande force de l'ordinateur !</p>
+      <p><strong>La boucle `Tant que` :</strong> Répète *tant que* la condition est vraie.</p>
+      
+      <pre class="code">
+Début
+  compteur ← 1
+  Tant que compteur <= 5 faire
+     Afficher "Bonjour"
+     compteur ← compteur + 1 // Très important : ne pas oublier d'arrêter !
+  FinTantQue
+Fin
+      </pre>
+      
+      <p><strong>La boucle `Pour` :</strong> Idéale quand on sait d'avance combien de fois on veut répéter.</p>
+      <h3>🧠 Exercice 3 : Boucle "Pour"</h3>
+      <p>Affiche la somme des 100 premiers nombres (1+2+3+...+100).</p>
+      <textarea id="editor3" class="editor" rows="8">Début
+  somme ← 0
+  Pour i ← 1 à 100 faire
+     somme ← somme + i
+  FinPour
+  Afficher somme
+Fin</textarea>
+      <button onclick="runAlgorithm('editor3', 'output3')">▶️ Exécuter</button>
+      <pre id="output3" class="output"></pre>
+    </section>
+    
+    <section>
+      <h2>Module 3 : Organiser les Données (Les Tableaux)</h2>
+      <p>Que faire si vous avez 50 notes à stocker ? Créer 50 variables ? Non ! On utilise un <strong>tableau</strong>.</p>
+      <p>Un tableau est comme une grande armoire avec des tiroirs numérotés (les "index").</details>
+      
+      <pre class="code">
+Début
+  // Un tableau de notes. L'index 1 contient 12, l'index 2 contient 18...
+  notes ← [12, 18, 10, 15]
+  
+  // Afficher la 2ème note
+  Afficher notes[2] // Affichera 18
+  
+  // Modifier la 1ère note
+  notes[1] ← 14
+  
+  // Parcourir le tableau avec une boucle
+  Pour i ← 1 à 4 faire
+    Afficher notes[i]
+  FinPour
+Fin
+      </pre>
+      <div class="warning-box">
+        <strong>Note :</strong> L'interpréteur de pseudo-code de cette page est simple. Pour tester les tableaux et les fonctions (module suivant), utilisez le <strong><a href="python.html">Mode Python</a></strong> !
+      </div>
+    </section>
+    
+    <section>
+      <h2>Module 4 : Rendre le Code Réutilisable (Les Fonctions)</h2>
+      <p>Une <strong>fonction</strong> est un bloc de code réutilisable qui effectue une tâche spécifique. C'est comme créer votre propre instruction.</p>
+      <p>Une fonction peut prendre des <strong>paramètres</strong> (des informations en entrée) et <strong>retourner</strong> un résultat (une sortie).</p>
+      <pre class="code">
+// Définition d'une fonction qui calcule la TVA
+Fonction CalculerTVA(prixHT)
+  prixTTC ← prixHT * 1.20
+  Retourner prixTTC
+FinFonction
+
+// Utilisation de la fonction dans l'algorithme principal
+Début
+  prix1 ← CalculerTVA(100)
+  Afficher prix1 // Affichera 120
+  
+  prix2 ← CalculerTVA(50)
+  Afficher prix2 // Affichera 60
+Fin
+      </pre>
+      <p>Sans fonction, vous auriez dû écrire `* 1.20` à chaque fois. Les fonctions rendent le code plus propre et plus facile à maintenir.</p>
+    </section>
+
+    <section>
+      <h2>Module 5 : Teste tes Connaissances !</h2>
+      <div class="quiz-question">
+        <p>1. Une variable est une "boîte" qui ne peut contenir qu'un nombre.</p>
+        <button onclick="checkAnswer(this, false)">Vrai</button>
+        <button onclick="checkAnswer(this, true)">Faux</button>
+      </div>
+      <div class="quiz-question">
+        <p>2. La structure "Si... Alors... Sinon" est une...</p>
+        <button onclick="checkAnswer(this, false)">Boucle</button>
+        <button onclick="checkAnswer(this, true)">Condition</button>
+      </div>
+      <div class="quiz-question">
+        <p>3. Quel est le meilleur outil pour stocker 100 noms d'étudiants ?</p>
+        <button onclick="checkAnswer(this, true)">Un Tableau</button>
+        <button onclick="checkAnswer(this, false)">Une boucle 'Pour'</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎉 Félicitations !</h2>
+      <p>Tu as terminé la formation complète sur les bases de l'algorithmique. Tu as maintenant les fondations logiques pour apprendre n'importe quel langage de programmation. Entraîne-toi à refaire les exercices en Python !</p>
+      <a href="python.html" class="btn">🐍 Tester le Mode Python</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 – Réalisé par Abdellatif KASSOUR pour les étudiants MSI</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

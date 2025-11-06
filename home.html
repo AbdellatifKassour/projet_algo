@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Cours d’Algorithmique Interactif</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gatekeeper.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-content">
+      <div class="nav-logo">AlgoMSI</div>
+      <ul>
+        <li><a href="home.html" class="active">🎓 Accueil</a></li>
+        <li><a href="cours.html">📘 Cours</a></li>
+        <li><a href="python.html">🐍 Mode Python</a></li>
+        <li><a href="snake.html">🕹️ Jeu Snake</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="main-header">
+    <h1>🎓 Cours Interactif d’Algorithmique</h1>
+    <p>Apprends les bases de la logique informatique pas à pas, avec exercices et exécution réelle en Python !</p>
+  </header>
+
+  <main class="main-container">
+    <section class="home-section">
+      <h2>🌱 Commence ton apprentissage</h2>
+      <p>Découvre le concept d’algorithme, les structures de base, et teste ton savoir grâce aux quiz et à un vrai interpréteur Python.</p>
+      <a href="cours.html" class="btn">📘 Accéder au cours</a>
+      <a href="python.html" class="btn-secondary">🐍 Mode Python</a>
+    </section>
+
+    <section class="progress-section">
+      <h2>📊 Progression</h2>
+      <div id="progress-bar">
+        <div id="progress-fill" style="width: 0%;"></div>
+      </div>
+      <p id="progress-text">Progression : 0%</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 – Réalisé par Abdellatif KASSOUR pour les étudiants MSI</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

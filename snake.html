@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu Snake</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gatekeeper.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-content">
+      <div class="nav-logo">AlgoMSI</div>
+      <ul>
+        <li><a href="home.html">🎓 Accueil</a></li>
+        <li><a href="cours.html">📘 Cours</a></li>
+        <li><a href="python.html">🐍 Mode Python</a></li>
+        <li><a href="snake.html" class="active">🕹️ Jeu Snake</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <h1>🕹️ Snake</h1>
+    <p>Utilisez les touches fléchées pour diriger le serpent. Ne touchez pas les murs ni votre propre queue !</p>
+    
+    <div class="snake-game-container">
+      <canvas id="snake-canvas" width="400" height="400"></canvas>
+      <div id="snake-score">Score : 0</div>
+      <button class="btn" id="start-snake-btn">Démarrer le jeu</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 – Réalisé par Abdellatif KASSOUR pour les étudiants MSI</p>
+  </footer>
+
+  <script src="snake.js"></script>
+</body>
+</html>
